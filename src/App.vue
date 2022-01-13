@@ -26,7 +26,7 @@
         <ListGrid />
       </div>
       <div class="grid-item grid-item9">
-        <p>f</p>
+        <EightBall />
       </div>
     </div>
   </div>
@@ -40,6 +40,7 @@ import Questions from "./components/questions.vue"
 import Orders from "./components/order.vue"
 import Search from "./components/search.vue"
 import ListGrid from "./components/list-grid.vue"
+import EightBall from "./components/ball.vue"
 
 export default {
   name: "App",
@@ -50,6 +51,7 @@ export default {
     Orders,
     Search,
     ListGrid,
+    EightBall
   },
 };
 </script>
