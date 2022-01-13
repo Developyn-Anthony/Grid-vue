@@ -5,7 +5,7 @@
         <Clock />
       </div>
       <div class="grid-item grid-item2">
-        <p>f</p>
+        <Signup />
       </div>
       <div class="grid-item grid-item3">
         <p>f</p>
@@ -35,11 +35,13 @@
 <script>
 // import component from './components/component.vue'
 import Clock from './components/clock.vue'
+import Signup from './components/signup.vue'
 
 export default {
   name: "App",
   components: {
     Clock,
+    Signup,
   },
 };
 </script>
@@ -92,12 +94,20 @@ body {
         grid-template-columns: repeat(2, 1fr);
         grid-column-gap: 0.5rem;
     }
+
+    .input-control {
+        width: 80%;
+    }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
     .grid-container {
         grid-template-rows: repeat(9, 22rem);
+    }
+
+    .p-fontSize {
+        font-size: medium;
     }
 }
 
