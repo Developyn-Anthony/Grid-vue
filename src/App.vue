@@ -20,7 +20,7 @@
         <Orders />
       </div>
       <div class="grid-item grid-item7">
-        <p>f</p>
+        <Search />
       </div>
       <div class="grid-item grid-item8">
         <p>f</p>
@@ -38,6 +38,7 @@ import Clock from "./components/clock.vue"
 import Signup from "./components/signup.vue"
 import Questions from "./components/questions.vue"
 import Orders from "./components/order.vue"
+import Search from "./components/search.vue"
 
 export default {
   name: "App",
@@ -46,6 +47,7 @@ export default {
     Signup,
     Questions,
     Orders,
+    Search,
   },
 };
 </script>
