@@ -23,7 +23,7 @@
         <Search />
       </div>
       <div class="grid-item grid-item8">
-        <p>f</p>
+        <ListGrid />
       </div>
       <div class="grid-item grid-item9">
         <p>f</p>
@@ -39,6 +39,7 @@ import Signup from "./components/signup.vue"
 import Questions from "./components/questions.vue"
 import Orders from "./components/order.vue"
 import Search from "./components/search.vue"
+import ListGrid from "./components/list-grid.vue"
 
 export default {
   name: "App",
@@ -48,6 +49,7 @@ export default {
     Questions,
     Orders,
     Search,
+    ListGrid,
   },
 };
 </script>
@@ -114,17 +116,6 @@ body {
   .p-fontSize {
     font-size: medium;
   }
-
-  .game-imgs {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    padding-right: 10rem;
-  }
-
-  .grid-list-anchor {
-    height: 80%;
-  }
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
@@ -138,22 +129,8 @@ body {
     margin-top: -0.1rem;
   }
 
-  .game-imgs {
-    margin-left: -0.1rem;
-  }
-
   .circle p {
     font-size: 16px;
-  }
-
-  .grid-list-anchor {
-    height: 75%;
-  }
-}
-
-@media only screen and (min-width: 1650px) {
-  .grid-list-anchor {
-    height: 100%;
   }
 }
 </style>
