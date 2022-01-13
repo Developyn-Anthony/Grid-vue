@@ -8,7 +8,7 @@
         <Signup />
       </div>
       <div class="grid-item grid-item3">
-        <p>f</p>
+        <Questions />
       </div>
       <div class="grid-item grid-item4">
         <p>f</p>
@@ -34,14 +34,16 @@
 
 <script>
 // import component from './components/component.vue'
-import Clock from './components/clock.vue'
-import Signup from './components/signup.vue'
+import Clock from "./components/clock.vue"
+import Signup from "./components/signup.vue"
+import Questions from "./components/questions.vue"
 
 export default {
   name: "App",
   components: {
     Clock,
     Signup,
+    Questions,
   },
 };
 </script>
@@ -90,36 +92,65 @@ body {
 /* Media queries */
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
-    .grid-container {
-        grid-template-columns: repeat(2, 1fr);
-        grid-column-gap: 0.5rem;
-    }
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 0.5rem;
+  }
 
-    .input-control {
-        width: 80%;
-    }
+  .input-control {
+    width: 80%;
+  }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
-    .grid-container {
-        grid-template-rows: repeat(9, 22rem);
-    }
+  .grid-container {
+    grid-template-rows: repeat(9, 22rem);
+  }
 
-    .p-fontSize {
-        font-size: medium;
-    }
+  .p-fontSize {
+    font-size: medium;
+  }
+
+  .game-imgs {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-right: 10rem;
+  }
+
+  .grid-list-anchor {
+    height: 80%;
+  }
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1279px) {
-    .grid-container {
-        grid-template-rows: repeat(9, 25rem);
-        grid-template-columns: repeat(3, 1fr);
-    }
+  .grid-container {
+    grid-template-rows: repeat(9, 25rem);
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .img-text {
+    margin-top: -0.1rem;
+  }
+
+  .game-imgs {
+    margin-left: -0.1rem;
+  }
+
+  .circle p {
+    font-size: 16px;
+  }
+
+  .grid-list-anchor {
+    height: 75%;
+  }
 }
 
 @media only screen and (min-width: 1650px) {
+  .grid-list-anchor {
+    height: 100%;
+  }
 }
-
 </style>
