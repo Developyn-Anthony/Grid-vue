@@ -40,6 +40,7 @@ export default {
 .clock {
     widows: 100%;
     height: 81%;
+    text-align: center;
 }
 
 .clock-time {
@@ -54,5 +55,6 @@ export default {
     border-color: darkred;
     transition-duration: 1.5s;
 }
+
 </style>
 

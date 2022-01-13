@@ -17,7 +17,7 @@
         <p>f</p>
       </div>
       <div class="grid-item grid-item6">
-        <p>f</p>
+        <Orders />
       </div>
       <div class="grid-item grid-item7">
         <p>f</p>
@@ -37,6 +37,7 @@
 import Clock from "./components/clock.vue"
 import Signup from "./components/signup.vue"
 import Questions from "./components/questions.vue"
+import Orders from "./components/order.vue"
 
 export default {
   name: "App",
@@ -44,6 +45,7 @@ export default {
     Clock,
     Signup,
     Questions,
+    Orders,
   },
 };
 </script>
@@ -55,9 +57,8 @@ body {
 
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
-  text-align: center;
   color: white;
-  width: 95%;
+  width: 98%;
   margin-left: auto;
   margin-right: auto;
 }

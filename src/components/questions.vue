@@ -186,6 +186,7 @@ export default {
     grid-template-rows: repeat(5, 4rem);
     margin-top: -4rem;
     grid-row-gap: 0.3rem;
+    overflow: auto;
 }
 
 .grid3-item {
@@ -209,7 +210,8 @@ export default {
 }
 
 .multi-questions {
-    margin-bottom: -0.5rem;
+    margin-bottom: -0.3rem;
+
 }
 
 .multi-radio {
@@ -220,6 +222,7 @@ export default {
 .multi-labels {
     padding-right: 0.3rem;
     padding-left: 0.3rem;
+    padding-bottom: 0.5rem;
 }
 
 .Center {
