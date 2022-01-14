@@ -11,10 +11,10 @@
         <Questions />
       </div>
       <div class="grid-item grid-item4">
-        <Table />
+        <Table :peoples="people" @delete-task="deleteTask"/>
       </div>
       <div class="grid-item grid-item5">
-        <TableSubmit />
+        <TableSubmit @submit="addNewRow" />
       </div>
       <div class="grid-item grid-item6">
         <Orders />
@@ -57,7 +57,26 @@ export default {
     ListGrid,
     EightBall,
   },
-  data() {},
+  data() {
+    return {
+      people: [
+        {
+          nameId: 1000,
+          fName: "Anthony",
+          lName: "White",
+          age: 20,
+        },
+      ],
+    };
+  },
+  methods: {
+    addNewRow(person) {
+      this.people.push(person);
+    },
+    deleteTask(index) {
+      this.people.splice(index, 1)
+    }
+  },
 };
 </script>
 

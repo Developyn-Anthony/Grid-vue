@@ -6,7 +6,7 @@
         <th>Last Name</th>
         <th>Age</th>
       </tr>
-      <tr class="list-person" :key="people.nameId" v-for="people in this.$root.$data.shared">
+      <tr class="list-person" :key="people.nameId" v-for="people in peoples">
         <td>{{ people.fName }}</td>
         <td>{{ people.lName }}</td>
         <td>{{ people.age }}</td>
@@ -21,59 +21,12 @@ export default {
   name: "Table",
   props: {
     peoples: {
-      f_name: {
-        type: String,
-      },
-      l_name: {
-        type: String,
-      },
-      age: {
-        type: Number,
-      },
-      uid: {
-        type: Number,
-      },
-    },
-  },
-  data() {
-    return {
-      newPerson: [
-        {
-          nameId: 0,
-          fName: "1",
-          lName: "2",
-          age: 20,
-        },
-      ],
-      people: [
-        {
-          nameId: 1000,
-          fName: "Anthony",
-          lName: "White",
-          age: 20,
-        },
-      ],
-    };
+      type: Array,
+    }
   },
   methods: {
     deleteTask(id) {
-      let index = this.people.map(id => id.nameId).indexOf(id);
-      this.$root.$data.shared.splice(index, 1);
-    },
-    update(person) {
-      let uid = new Date().getTime().toString(36);
-
-      this.newPerson[0].nameId = uid;
-      this.newPerson[0].fName = person[0];
-      this.newPerson[0].lName = person[1];
-      this.newPerson[0].age = person[2];
-
-      this.people.push(this.newPerson[0]);
-    },
-  },
-  watch: {
-    peoples: function () {
-      this.people.push(this.peoples);
+      this.$emit('delete-task', this.id)
     },
   },
 };

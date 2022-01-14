@@ -26,7 +26,7 @@
           v-model="newAge"
           required
         /><br />
-        <button class="table-button" type="submit" v-on:click="addRow">
+        <button class="table-button" type="submit" @click="addRow">
           Submit
         </button>
       </form>
@@ -43,35 +43,13 @@ export default {
       firstName: "",
       lastName: "",
       newAge: "",
-      newPerson: [
-        {
-          nameId: 0,
-          fName: "1",
-          lName: "2",
-          age: 20,
-        },
-      ],
-      people: [
-        {
-          nameId: 1000,
-          fName: "Anthony",
-          lName: "White",
-          age: 20,
-        },
-      ],
     };
   },
   methods: {
     addRow(e) {
       e.preventDefault();
       let uid = (new Date().getTime()).toString(36);
-
-      this.newPerson[0].nameId = uid;
-      this.newPerson[0].fName = this.firstName;
-      this.newPerson[0].lName = this.lastName;
-      this.newPerson[0].age = this.newAge;
-      this.people.push(this.newPerson[0]);
-      this.$root.$data.shared.push(this.newPerson[0]);
+      this.$emit('submit', {fName: this.firstName, lName: this.lastName, age: this.newAge, nameId: uid});
 
       this.firstName = "";
       this.lastName = "";
