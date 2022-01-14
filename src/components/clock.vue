@@ -38,7 +38,7 @@ export default {
 <style scoped>
 
 .clock {
-    widows: 100%;
+    width: 100%;
     height: 81%;
     text-align: center;
 }

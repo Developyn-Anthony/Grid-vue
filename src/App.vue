@@ -11,10 +11,10 @@
         <Questions />
       </div>
       <div class="grid-item grid-item4">
-        <p>f</p>
+        <Table />
       </div>
       <div class="grid-item grid-item5">
-        <p>f</p>
+        <TableSubmit />
       </div>
       <div class="grid-item grid-item6">
         <Orders />
@@ -34,13 +34,15 @@
 
 <script>
 // import component from './components/component.vue'
-import Clock from "./components/clock.vue"
-import Signup from "./components/signup.vue"
-import Questions from "./components/questions.vue"
-import Orders from "./components/order.vue"
-import Search from "./components/search.vue"
-import ListGrid from "./components/list-grid.vue"
-import EightBall from "./components/ball.vue"
+import Clock from "./components/clock.vue";
+import Signup from "./components/signup.vue";
+import Questions from "./components/questions.vue";
+import Orders from "./components/order.vue";
+import Table from "./components/table.vue";
+import TableSubmit from "./components/submitTable.vue";
+import Search from "./components/search.vue";
+import ListGrid from "./components/list-grid.vue";
+import EightBall from "./components/ball.vue";
 
 export default {
   name: "App",
@@ -49,10 +51,13 @@ export default {
     Signup,
     Questions,
     Orders,
+    Table,
+    TableSubmit,
     Search,
     ListGrid,
-    EightBall
+    EightBall,
   },
+  data() {},
 };
 </script>
 
